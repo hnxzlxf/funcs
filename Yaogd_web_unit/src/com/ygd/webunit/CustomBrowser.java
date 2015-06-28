@@ -8,7 +8,7 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 /**
- * 专用于测试静态网页
+ * 专用于测试静态网页。
  * @author yaoguangdong
  * 2014-8-15
  */
