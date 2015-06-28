@@ -1,0 +1,406 @@
+com.commonsware.cwac.camera.CWACActivity -> com.commonsware.cwac.camera.CWACActivity:
+    com.commonsware.cwac.camera.CameraView cameraView -> a
+    com.commonsware.cwac.camera.CameraHost host -> b
+    android.widget.SeekBar zoom -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onProgressChanged(android.widget.SeekBar,int,boolean) -> onProgressChanged
+    void onStartTrackingTouch(android.widget.SeekBar) -> onStartTrackingTouch
+    void onStopTrackingTouch(android.widget.SeekBar) -> onStopTrackingTouch
+    android.widget.SeekBar access$0(com.commonsware.cwac.camera.CWACActivity) -> a
+com.commonsware.cwac.camera.CWACActivity$1 -> com.commonsware.cwac.camera.a:
+    com.commonsware.cwac.camera.CWACActivity this$0 -> a
+    void run() -> run
+com.commonsware.cwac.camera.CameraHost -> com.commonsware.cwac.camera.b:
+    android.hardware.Camera$Parameters adjustPreviewParameters(android.hardware.Camera$Parameters) -> a
+    int getCameraId() -> a
+    com.commonsware.cwac.camera.DeviceProfile getDeviceProfile() -> b
+    android.hardware.Camera$Size getPreviewSize(int,int,int,android.hardware.Camera$Parameters) -> a
+    void handleException(java.lang.Exception) -> a
+    boolean mirrorFFC() -> c
+    boolean rotateBasedOnExif() -> d
+    void saveImage$10723a7() -> e
+    void saveImage(byte[]) -> a
+    void onCameraFail(com.commonsware.cwac.camera.CameraHost$FailureReason) -> a
+com.commonsware.cwac.camera.CameraHost$FailureReason -> com.commonsware.cwac.camera.c:
+    com.commonsware.cwac.camera.CameraHost$FailureReason NO_CAMERAS_REPORTED -> a
+    com.commonsware.cwac.camera.CameraHost$FailureReason UNKNOWN -> b
+    int value -> c
+    com.commonsware.cwac.camera.CameraHost$FailureReason[] ENUM$VALUES -> d
+    com.commonsware.cwac.camera.CameraHost$FailureReason[] values() -> values
+    com.commonsware.cwac.camera.CameraHost$FailureReason valueOf(java.lang.String) -> valueOf
+com.commonsware.cwac.camera.CameraHostProvider -> com.commonsware.cwac.camera.d:
+    com.commonsware.cwac.camera.CameraHost getCameraHost() -> a
+com.commonsware.cwac.camera.CameraUtils -> com.commonsware.cwac.camera.e:
+com.commonsware.cwac.camera.CameraUtils$SizeComparator -> com.commonsware.cwac.camera.f:
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.commonsware.cwac.camera.CameraView -> com.commonsware.cwac.camera.CameraView:
+    com.commonsware.cwac.camera.PreviewStrategy previewStrategy -> a
+    android.hardware.Camera$Size previewSize -> b
+    android.hardware.Camera camera -> c
+    boolean inPreview -> d
+    com.commonsware.cwac.camera.CameraHost host -> e
+    com.commonsware.cwac.camera.CameraView$OnOrientationChange onOrientationChange -> f
+    int displayOrientation -> g
+    int outputOrientation -> h
+    int cameraId -> i
+    android.hardware.Camera$Parameters previewParams -> j
+    boolean needBitmap -> k
+    boolean needByteArray -> l
+    boolean isAutoFocusing -> m
+    void setHost(com.commonsware.cwac.camera.CameraHost) -> a
+    void onResume() -> a
+    void onPause() -> b
+    void onMeasure(int,int) -> onMeasure
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void onPictureTaken(byte[],android.hardware.Camera) -> onPictureTaken
+    void onAutoFocus(boolean,android.hardware.Camera) -> onAutoFocus
+    com.commonsware.cwac.camera.ZoomTransaction zoomTo(int) -> a
+    void previewCreated() -> c
+    void previewDestroyed() -> d
+    void initPreview$255f295() -> e
+    void initPreview$486912df() -> f
+    void startPreview() -> g
+    void stopPreview() -> h
+    int getCameraPictureRotation(int) -> b
+    android.hardware.Camera access$0(com.commonsware.cwac.camera.CameraView) -> a
+    int access$1(com.commonsware.cwac.camera.CameraView,int) -> a
+    int access$2(com.commonsware.cwac.camera.CameraView) -> b
+    void access$3(com.commonsware.cwac.camera.CameraView,int) -> b
+com.commonsware.cwac.camera.CameraView$OnOrientationChange -> com.commonsware.cwac.camera.g:
+    com.commonsware.cwac.camera.CameraView this$0 -> a
+    void onOrientationChanged(int) -> onOrientationChanged
+com.commonsware.cwac.camera.DeviceProfile -> com.commonsware.cwac.camera.h:
+    com.commonsware.cwac.camera.DeviceProfile SINGLETON -> a
+    com.commonsware.cwac.camera.DeviceProfile getInstance() -> a
+    boolean encodesRotationToExif() -> b
+    boolean portraitFFCFlipped() -> c
+com.commonsware.cwac.camera.DeviceProfile$DroidIncredible2Profile -> com.commonsware.cwac.camera.i:
+    boolean portraitFFCFlipped() -> c
+com.commonsware.cwac.camera.DeviceProfile$FullExifFixupDeviceProfile -> com.commonsware.cwac.camera.j:
+    boolean encodesRotationToExif() -> b
+com.commonsware.cwac.camera.DeviceProfile$HtcOneDeviceProfile -> com.commonsware.cwac.camera.k:
+com.commonsware.cwac.camera.DeviceProfile$MotorolaDeviceProfile -> com.commonsware.cwac.camera.l:
+com.commonsware.cwac.camera.DeviceProfile$MotorolaRazrIProfile -> com.commonsware.cwac.camera.m:
+com.commonsware.cwac.camera.DeviceProfile$Nexus4DeviceProfile -> com.commonsware.cwac.camera.n:
+com.commonsware.cwac.camera.DeviceProfile$SamsungDeviceProfile -> com.commonsware.cwac.camera.o:
+com.commonsware.cwac.camera.DeviceProfile$SamsungGalaxyAce3Profile -> com.commonsware.cwac.camera.p:
+com.commonsware.cwac.camera.DeviceProfile$SamsungGalaxyCameraDeviceProfile -> com.commonsware.cwac.camera.q:
+com.commonsware.cwac.camera.DeviceProfile$SamsungGalaxyS3DeviceProfile -> com.commonsware.cwac.camera.r:
+com.commonsware.cwac.camera.DeviceProfile$SamsungGalaxySGHI337DeviceProfile -> com.commonsware.cwac.camera.s:
+com.commonsware.cwac.camera.DeviceProfile$SamsungGalaxyTab2Profile -> com.commonsware.cwac.camera.t:
+com.commonsware.cwac.camera.DeviceProfile$SonyXperiaEProfile -> com.commonsware.cwac.camera.u:
+com.commonsware.cwac.camera.ImageCleanupTask -> com.commonsware.cwac.camera.v:
+    byte[] data -> a
+    android.graphics.Bitmap workingCopy -> b
+    int cameraId -> c
+    com.commonsware.cwac.camera.CameraHost host -> d
+    java.io.File cacheDir -> e
+    boolean needBitmap -> f
+    boolean needByteArray -> g
+    int displayOrientation -> h
+    void run() -> run
+    android.graphics.Bitmap rotate(android.graphics.Bitmap,int) -> a
+    void synchronizeModels(boolean,boolean) -> a
+com.commonsware.cwac.camera.PreviewStrategy -> com.commonsware.cwac.camera.w:
+    void attach(android.hardware.Camera) -> a
+    android.view.View getWidget() -> a
+com.commonsware.cwac.camera.SimpleCameraHost -> com.commonsware.cwac.camera.x:
+    java.lang.String[] SCAN_TYPES -> a
+    android.content.Context ctxt -> b
+    android.hardware.Camera$Parameters adjustPreviewParameters(android.hardware.Camera$Parameters) -> a
+    int getCameraId() -> a
+    com.commonsware.cwac.camera.DeviceProfile getDeviceProfile() -> b
+    android.hardware.Camera$Size getPreviewSize(int,int,int,android.hardware.Camera$Parameters) -> a
+    void handleException(java.lang.Exception) -> a
+    boolean mirrorFFC() -> c
+    void saveImage$10723a7() -> e
+    void saveImage(byte[]) -> a
+    boolean rotateBasedOnExif() -> d
+    void onCameraFail(com.commonsware.cwac.camera.CameraHost$FailureReason) -> a
+    void onAutoFocus(boolean,android.hardware.Camera) -> onAutoFocus
+com.commonsware.cwac.camera.SurfacePreviewStrategy -> com.commonsware.cwac.camera.y:
+    com.commonsware.cwac.camera.CameraView cameraView -> a
+    android.view.SurfaceView preview -> b
+    android.view.SurfaceHolder previewHolder -> c
+    void surfaceCreated(android.view.SurfaceHolder) -> surfaceCreated
+    void surfaceChanged(android.view.SurfaceHolder,int,int,int) -> surfaceChanged
+    void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
+    void attach(android.hardware.Camera) -> a
+    android.view.View getWidget() -> a
+com.commonsware.cwac.camera.ZoomTransaction -> com.commonsware.cwac.camera.z:
+    android.hardware.Camera camera -> a
+    int level -> b
+    java.lang.Runnable onComplete -> c
+    android.hardware.Camera$OnZoomChangeListener onChange -> d
+    com.commonsware.cwac.camera.ZoomTransaction onComplete(java.lang.Runnable) -> a
+    void go() -> a
+    void onZoomChange(int,boolean,android.hardware.Camera) -> onZoomChange
+com.lefu.A -> com.lefu.a:
+    int readIntPreferences(android.content.Context,java.lang.String) -> a
+    void writeIntPreferences(android.content.Context,java.lang.String,int) -> a
+com.lefu.bsi.activity.MainActivity -> com.lefu.bsi.activity.MainActivity:
+    int MCC -> a
+    int MNC -> b
+    int LAC -> c
+    int CID -> d
+    int baseStationNum -> e
+    void onCreate(android.os.Bundle) -> onCreate
+    java.lang.String getBaseStationInfo() -> a
+    java.lang.String getBaseInfo(java.util.List) -> a
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    java.lang.String access$0(com.lefu.bsi.activity.MainActivity) -> a
+com.lefu.bsi.activity.MainActivity$1 -> com.lefu.bsi.activity.a:
+    com.lefu.bsi.activity.MainActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.lefu.camera.CameraActivity -> com.lefu.camera.CameraActivity:
+    android.widget.ImageButton imageButton -> a
+    com.lefu.camera.CameraMask maskView -> b
+    com.lefu.camera.CameraPreview mCameraPreview -> c
+    boolean isTaking -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void onCameraStopped(byte[]) -> a
+    void onCameraStatus(int) -> a
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    boolean access$0(com.lefu.camera.CameraActivity) -> a
+    void access$1$134202d5(com.lefu.camera.CameraActivity) -> b
+    com.lefu.camera.CameraPreview access$2(com.lefu.camera.CameraActivity) -> c
+com.lefu.camera.CameraActivity$1 -> com.lefu.camera.a:
+    com.lefu.camera.CameraActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+com.lefu.camera.CameraMask -> com.lefu.camera.CameraMask:
+    android.graphics.Rect mFrame -> a
+    boolean visiable -> b
+    android.content.Context mCxt -> c
+    int frameLeftMin -> d
+    int frameTopMin -> e
+    int frameRightMin -> f
+    int frameBottomMin -> g
+    float startX -> h
+    float startY -> i
+    int frameLeftMove -> j
+    int frameRightMove -> k
+    int frameTopMove -> l
+    int frameBottomMove -> m
+    int touchPosition -> n
+    int mFrameColor -> o
+    int mMaskColor -> p
+    android.graphics.Rect m_Box -> q
+    android.graphics.Point screenResolution -> r
+    int screen_height -> s
+    int screen_width -> t
+    long doubleClickTime -> u
+    android.graphics.Paint maskPaint -> v
+    android.graphics.Paint choosedPaint -> w
+    android.graphics.Paint textPaint -> x
+    java.lang.String tips -> y
+    int textX -> z
+    int textY -> A
+    void onDraw(android.graphics.Canvas) -> onDraw
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+com.lefu.camera.CameraPreview -> com.lefu.camera.CameraPreview:
+    float picWratio -> a
+    float picHratio -> b
+    android.content.Context mCxt -> c
+    int pictureSizeWidth -> d
+    int previewSizeWidth -> e
+    int pictureSizeHeight -> f
+    int previewSizeHeight -> g
+    com.lefu.camera.CameraPreview$OnCameraStatusListener listener -> h
+    android.view.SurfaceHolder holder -> i
+    android.hardware.Camera camera -> j
+    java.util.List focusModes -> k
+    android.hardware.Camera$PictureCallback pictureCallback -> l
+    void surfaceCreated(android.view.SurfaceHolder) -> surfaceCreated
+    void stopCamera(int) -> a
+    void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
+    void surfaceChanged(android.view.SurfaceHolder,int,int,int) -> surfaceChanged
+    void takePicture() -> a
+    void setOnCameraStatusListener(com.lefu.camera.CameraPreview$OnCameraStatusListener) -> a
+    void access$0$7eeef389(com.lefu.camera.CameraPreview) -> a
+    com.lefu.camera.CameraPreview$OnCameraStatusListener access$1(com.lefu.camera.CameraPreview) -> b
+    android.hardware.Camera$PictureCallback access$2(com.lefu.camera.CameraPreview) -> c
+com.lefu.camera.CameraPreview$1 -> com.lefu.camera.b:
+    com.lefu.camera.CameraPreview this$0 -> a
+    void onPictureTaken(byte[],android.hardware.Camera) -> onPictureTaken
+com.lefu.camera.CameraPreview$2 -> com.lefu.camera.c:
+    com.lefu.camera.CameraPreview this$0 -> a
+    void onAutoFocus(boolean,android.hardware.Camera) -> onAutoFocus
+com.lefu.camera.CameraPreview$OnCameraStatusListener -> com.lefu.camera.d:
+    void onCameraStopped(byte[]) -> a
+    void onCameraStatus(int) -> a
+com.lefu.camera.CompressImgImpl -> com.lefu.camera.e:
+    android.graphics.Bitmap compressImgResize$747a1dca$706933a(byte[]) -> a
+    byte[] compressBmpToFile$63efc584(android.graphics.Bitmap) -> a
+com.lefu.camera.ICompressImg -> com.lefu.camera.f:
+    android.graphics.Bitmap compressImgResize$747a1dca$706933a(byte[]) -> a
+    byte[] compressBmpToFile$63efc584(android.graphics.Bitmap) -> a
+com.lefu.camera.MaskSurfaceView -> com.lefu.camera.MaskSurfaceView:
+    android.view.SurfaceHolder mSurfaceHolder -> a
+    boolean loop -> b
+    int mCount -> c
+    int mode -> d
+    void surfaceCreated(android.view.SurfaceHolder) -> surfaceCreated
+    void surfaceChanged(android.view.SurfaceHolder,int,int,int) -> surfaceChanged
+    void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
+    void run() -> run
+    void drawHeart2D(android.graphics.Canvas,android.graphics.Paint,int,int,float) -> a
+    void drawHeart3D(android.graphics.Canvas,android.graphics.Paint) -> a
+com.lefu.camera.ProcessPhoto -> com.lefu.camera.g:
+    android.net.Uri takePhotoEnd(android.content.Context,long,byte[],com.lefu.camera.CameraMask,com.lefu.camera.CameraPreview) -> a
+    android.net.Uri insertImage(android.content.Context,long,android.graphics.Bitmap,byte[]) -> a
+com.lefu.camera.StartActivity -> com.lefu.camera.StartActivity:
+    android.widget.ImageView imageView -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+com.lefu.webview.WebViewDialog -> com.lefu.webview.WebViewDialog:
+    java.lang.String DEBUG_TAG -> a
+    android.widget.Button mButton -> b
+    android.widget.EditText mEditText -> c
+    android.webkit.WebView mWebView -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+com.lefu.webview.WebViewDialog$1 -> com.lefu.webview.a:
+    com.lefu.webview.WebViewDialog this$0 -> a
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+    void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
+com.lefu.webview.WebViewDialog$2 -> com.lefu.webview.b:
+    com.lefu.webview.WebViewDialog this$0 -> a
+    boolean onJsAlert(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsAlert
+    boolean onJsConfirm(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsConfirm
+    boolean onJsPrompt(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String,android.webkit.JsPromptResult) -> onJsPrompt
+    void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
+    void onReceivedTitle(android.webkit.WebView,java.lang.String) -> onReceivedTitle
+com.lefu.webview.WebViewDialog$2$1 -> com.lefu.webview.c:
+    com.lefu.webview.WebViewDialog$2 this$1 -> a
+    android.webkit.JsResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.lefu.webview.WebViewDialog$2$2 -> com.lefu.webview.d:
+    com.lefu.webview.WebViewDialog$2 this$1 -> a
+    android.webkit.JsResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.lefu.webview.WebViewDialog$2$3 -> com.lefu.webview.e:
+    com.lefu.webview.WebViewDialog$2 this$1 -> a
+    android.webkit.JsResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.lefu.webview.WebViewDialog$2$4 -> com.lefu.webview.f:
+    com.lefu.webview.WebViewDialog$2 this$1 -> a
+    android.view.View val$dialogview -> b
+    android.webkit.JsPromptResult val$result -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.lefu.webview.WebViewDialog$2$5 -> com.lefu.webview.g:
+    com.lefu.webview.WebViewDialog$2 this$1 -> a
+    android.webkit.JsPromptResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.lefu.webview.WebViewDialog$2$6 -> com.lefu.webview.h:
+    com.lefu.webview.WebViewDialog$2 this$1 -> a
+    android.webkit.JsPromptResult val$result -> b
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.lefu.webview.WebViewLoadContact -> com.lefu.webview.WebViewLoadContact:
+    android.webkit.WebView mWebView -> a
+    com.lefu.webview.WebViewLoadContact$PersonalData mPersonalData -> b
+    android.os.Handler mHandler -> c
+    void onCreate(android.os.Bundle) -> onCreate
+com.lefu.webview.WebViewLoadContact$PersonalData -> com.lefu.webview.i:
+    java.lang.String mID -> a
+    java.lang.String mName -> b
+    java.lang.String mAge -> c
+    java.lang.String mBlog -> d
+    com.lefu.webview.WebViewLoadContact this$0 -> e
+com.lefu.webview.WebViewLoadContact$WebAppInterface -> com.lefu.webview.j:
+    com.lefu.webview.WebViewLoadContact this$0 -> a
+com.lefu.webview.camera.CameraWebviewActivity -> com.lefu.webview.camera.CameraWebviewActivity:
+    android.webkit.WebView webView -> a
+    java.lang.String fileFullName -> b
+    android.os.Handler mHandler -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    java.lang.String takePhoto() -> a
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void access$0(com.lefu.webview.camera.CameraWebviewActivity,java.lang.String) -> a
+com.lefu.webview.camera.CameraWebviewActivity$MyHandler -> com.lefu.webview.camera.a:
+    com.lefu.webview.camera.CameraWebviewActivity this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.lefu.webview.camera.CameraWebviewActivity$OpenPhoto -> com.lefu.webview.camera.b:
+    com.lefu.webview.camera.CameraWebviewActivity this$0 -> a
+    void run() -> run
+com.lefu.webview.camera.CameraWebviewActivity$TakePicture -> com.lefu.webview.camera.c:
+    com.lefu.webview.camera.CameraWebviewActivity this$0 -> a
+    void run() -> run
+com.lefu.webview.camera.CameraWebviewActivity$WebAppInterface -> com.lefu.webview.camera.d:
+    com.lefu.webview.camera.CameraWebviewActivity this$0 -> a
+com.lefu.webview.camera.MyWebChromeClient -> com.lefu.webview.camera.e:
+    android.os.Handler mHandler -> a
+    android.app.Activity activity -> b
+    boolean onJsAlert(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsAlert
+    boolean onJsConfirm(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsConfirm
+    boolean onJsPrompt(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String,android.webkit.JsPromptResult) -> onJsPrompt
+    void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
+    void onReceivedTitle(android.webkit.WebView,java.lang.String) -> onReceivedTitle
+    android.os.Handler access$0(com.lefu.webview.camera.MyWebChromeClient) -> a
+com.lefu.webview.camera.MyWebChromeClient$1 -> com.lefu.webview.camera.f:
+    com.lefu.webview.camera.MyWebChromeClient this$0 -> a
+    android.webkit.JsResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.lefu.webview.camera.MyWebChromeClient$2 -> com.lefu.webview.camera.g:
+    com.lefu.webview.camera.MyWebChromeClient this$0 -> a
+    android.webkit.JsResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.lefu.webview.camera.MyWebChromeClient$3 -> com.lefu.webview.camera.h:
+    com.lefu.webview.camera.MyWebChromeClient this$0 -> a
+    android.view.View val$dialogview -> b
+    android.webkit.JsPromptResult val$result -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.lefu.webview.camera.MyWebChromeClient$4 -> com.lefu.webview.camera.i:
+    com.lefu.webview.camera.MyWebChromeClient this$0 -> a
+    android.webkit.JsPromptResult val$result -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.lefu.webview.camera.MyWebChromeClient$5 -> com.lefu.webview.camera.j:
+    com.lefu.webview.camera.MyWebChromeClient this$0 -> a
+    android.webkit.JsPromptResult val$result -> b
+    void onCancel(android.content.DialogInterface) -> onCancel
+com.lefu.webview.camera.MyWebViewClient -> com.lefu.webview.camera.k:
+    android.content.Context cxt -> a
+    void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+    void doUpdateVisitedHistory(android.webkit.WebView,java.lang.String,boolean) -> doUpdateVisitedHistory
+    void onFormResubmission(android.webkit.WebView,android.os.Message,android.os.Message) -> onFormResubmission
+    void onLoadResource(android.webkit.WebView,java.lang.String) -> onLoadResource
+    void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
+    void onReceivedHttpAuthRequest(android.webkit.WebView,android.webkit.HttpAuthHandler,java.lang.String,java.lang.String) -> onReceivedHttpAuthRequest
+    void onReceivedLoginRequest(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String) -> onReceivedLoginRequest
+    void onReceivedSslError(android.webkit.WebView,android.webkit.SslErrorHandler,android.net.http.SslError) -> onReceivedSslError
+    void onScaleChanged(android.webkit.WebView,float,float) -> onScaleChanged
+    void onUnhandledKeyEvent(android.webkit.WebView,android.view.KeyEvent) -> onUnhandledKeyEvent
+    android.webkit.WebResourceResponse shouldInterceptRequest(android.webkit.WebView,java.lang.String) -> shouldInterceptRequest
+    boolean shouldOverrideKeyEvent(android.webkit.WebView,android.view.KeyEvent) -> shouldOverrideKeyEvent
+com.lefu.webview.loadContact.ContactPlugin -> com.lefu.webview.loadContact.a:
+    android.webkit.WebView webView -> a
+    com.lefu.webview.loadContact.ContactService contactService -> b
+    android.os.Handler handler -> c
+com.lefu.webview.loadContact.ContactService -> com.lefu.webview.loadContact.b:
+com.lefu.webview.loadContact.ShowContactActivity -> com.lefu.webview.loadContact.ShowContactActivity:
+    android.webkit.WebView webView -> a
+    com.lefu.webview.loadContact.ContactService contactService -> b
+    android.os.Handler handler -> c
+    void onCreate(android.os.Bundle) -> onCreate
+fenshi.ProgressView -> fenshi.ProgressView:
+    float a -> a
+    android.graphics.Paint b -> b
+    android.graphics.Paint c -> c
+    int d -> d
+    int e -> e
+    void a() -> a
+    void draw(android.graphics.Canvas) -> draw
+fenshi.RingView -> fenshi.RingView:
+    float a -> a
+    android.graphics.Paint b -> b
+    android.graphics.Paint c -> c
+    android.graphics.RectF d -> d
+    int e -> e
+    int f -> f
+    void a() -> a
+    void draw(android.graphics.Canvas) -> draw

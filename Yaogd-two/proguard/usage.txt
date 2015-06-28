@@ -1,0 +1,153 @@
+com.commonsware.cwac.camera.CWACActivity:
+    47:48:protected void setCameraView(com.commonsware.cwac.camera.CameraView)
+    59:60:public void setHost(com.commonsware.cwac.camera.CameraHost)
+    63:64:public void takePicture()
+    67:68:public void takePicture(boolean,boolean)
+    74:74:public int getDisplayOrientation()
+    86:87:public void lockToLandscape(boolean)
+    94:95:public void autoFocus()
+    102:103:public void cancelAutoFocus()
+    109:109:public boolean isAutoFocusAvailable()
+    117:118:public void restartPreview()
+    125:125:public java.lang.String getFlashMode()
+    143:143:public boolean doesZoomReallyWork()
+com.commonsware.cwac.camera.CameraHost:
+    public abstract android.hardware.Camera$Parameters adjustPictureParameters(android.hardware.Camera$Parameters)
+    public abstract android.hardware.Camera$Size getPictureSize(android.hardware.Camera$Parameters)
+    public abstract android.hardware.Camera$ShutterCallback getShutterCallback()
+com.commonsware.cwac.camera.CameraUtils:
+    private static final double ASPECT_TOLERANCE
+    23:23:public CameraUtils()
+    32:69:public static android.hardware.Camera$Size getOptimalPreviewSize(int,int,int,android.hardware.Camera$Parameters)
+    115:139:public static android.hardware.Camera$Size getLargestPictureSize(android.hardware.Camera$Parameters)
+    143:159:public static android.hardware.Camera$Size getSmallestPictureSize(android.hardware.Camera$Parameters)
+com.commonsware.cwac.camera.CameraView:
+    static final java.lang.String TAG
+    208:218:public void lockToLandscape(boolean)
+    236:239:public void restartPreview()
+    242:269:public void takePicture(boolean,boolean)
+    272:276:public void autoFocus()
+    279:280:public void cancelAutoFocus()
+    283:283:public boolean isAutoFocusAvailable()
+    296:296:public java.lang.String getFlashMode()
+    319:322:public boolean doesZoomReallyWork()
+    345:347:void previewReset(int,int)
+com.commonsware.cwac.camera.DeviceProfile:
+    85:85:public boolean rotateBasedOnExif()
+    93:93:public int getMinPictureHeight()
+    97:97:public int getMaxPictureHeight()
+    104:104:public android.hardware.Camera$Size getPreferredPreviewSizeForVideo(int,int,int,android.hardware.Camera$Parameters)
+    108:108:public boolean doesZoomActuallyWork(boolean)
+com.commonsware.cwac.camera.DeviceProfile$DroidIncredible2Profile:
+    186:186:public int getMaxPictureHeight()
+com.commonsware.cwac.camera.DeviceProfile$FullExifFixupDeviceProfile:
+    154:154:public boolean rotateBasedOnExif()
+com.commonsware.cwac.camera.DeviceProfile$HtcOneDeviceProfile:
+    120:120:public int getMaxPictureHeight()
+com.commonsware.cwac.camera.DeviceProfile$MotorolaRazrIProfile:
+    114:114:public boolean doesZoomActuallyWork(boolean)
+com.commonsware.cwac.camera.DeviceProfile$Nexus4DeviceProfile:
+    126:126:public int getMaxPictureHeight()
+com.commonsware.cwac.camera.DeviceProfile$SamsungGalaxyCameraDeviceProfile:
+    172:172:public int getMaxPictureHeight()
+com.commonsware.cwac.camera.DeviceProfile$SamsungGalaxyS3DeviceProfile:
+    165:165:public int getMinPictureHeight()
+com.commonsware.cwac.camera.DeviceProfile$SamsungGalaxySGHI337DeviceProfile:
+    142:142:public int getMaxPictureHeight()
+com.commonsware.cwac.camera.DeviceProfile$SamsungGalaxyTab2Profile:
+    132:132:public int getMaxPictureHeight()
+com.commonsware.cwac.camera.PreviewStrategy:
+    public abstract void attach(android.media.MediaRecorder)
+com.commonsware.cwac.camera.SimpleCameraHost:
+    45:45:public android.hardware.Camera$Parameters adjustPictureParameters(android.hardware.Camera$Parameters)
+    89:89:public android.hardware.Camera$Size getPictureSize(android.hardware.Camera$Parameters)
+    103:103:public android.hardware.Camera$ShutterCallback getShutterCallback()
+    201:205:protected java.io.File getVideoPath()
+    209:209:protected java.io.File getVideoDirectory()
+    214:216:protected java.lang.String getVideoFilename()
+com.commonsware.cwac.camera.SurfacePreviewStrategy:
+    62:63:public void attach(android.media.MediaRecorder)
+com.commonsware.cwac.camera.ZoomTransaction:
+    70:72:public com.commonsware.cwac.camera.ZoomTransaction onChange(android.hardware.Camera$OnZoomChangeListener)
+    103:104:public void cancel()
+com.lefu.A:
+    public static final boolean DEBUG
+    public static final int TIMEOUT
+    private static final java.lang.String T
+    public static final java.lang.String url
+    12:12:public A()
+    27:28:public static void e(java.lang.String,java.lang.String)
+    31:32:public static void e(java.lang.String)
+    36:37:public static void i(java.lang.String)
+    41:42:public static void i(java.lang.String,java.lang.String)
+    58:58:public static java.lang.String readPreferences(android.content.Context,java.lang.String)
+    63:66:public static void writePreferences(android.content.Context,java.lang.String,java.lang.String)
+com.lefu.AM
+com.lefu.BuildConfig
+com.lefu.R
+com.lefu.R$array
+com.lefu.R$attr
+com.lefu.R$color
+com.lefu.R$dimen
+com.lefu.R$drawable
+com.lefu.R$id
+com.lefu.R$layout
+com.lefu.R$menu
+com.lefu.R$string
+com.lefu.R$style
+com.lefu.bsi.activity.LocationCallback
+com.lefu.bsi.activity.LocationFetcher
+com.lefu.bsi.activity.LocationFetcher$1
+com.lefu.camera.CameraMask:
+    private static final int textSize
+com.lefu.camera.CameraPreview$OnCameraStatusListener:
+    public static final int OPEN_SUCCESS
+    public static final int OPEN_FAILED
+    public static final int FOCUS_SUCCESS
+    public static final int FOCUS_FAILED
+    public static final int TAKE_PICTURE_FINISHED
+    public static final int CAMERA_UNDEFINED_ERROR
+com.lefu.camera.MaskSurfaceView:
+    private static final long TIME
+    70:72:private void stop()
+com.lefu.camera.ProcessPhoto:
+    24:24:public ProcessPhoto()
+com.lefu.webview.WebViewLoadContact:
+    25:25:static synthetic android.os.Handler access$0(com.lefu.webview.WebViewLoadContact)
+    23:23:static synthetic android.webkit.WebView access$1(com.lefu.webview.WebViewLoadContact)
+    24:24:static synthetic com.lefu.webview.WebViewLoadContact$PersonalData access$2(com.lefu.webview.WebViewLoadContact)
+com.lefu.webview.WebViewLoadContact$PersonalData:
+    109:109:public java.lang.String getID()
+    113:113:public java.lang.String getName()
+    117:117:public java.lang.String getAge()
+    121:121:public java.lang.String getBlog()
+com.lefu.webview.WebViewLoadContact$WebAppInterface:
+    77:83:public void clickOnAndroid()
+    89:89:public com.lefu.webview.WebViewLoadContact$PersonalData getPersonalData()
+    64:64:static synthetic com.lefu.webview.WebViewLoadContact access$0(com.lefu.webview.WebViewLoadContact$WebAppInterface)
+com.lefu.webview.WebViewLoadContact$WebAppInterface$1
+com.lefu.webview.camera.CameraWebviewActivity:
+    35:35:static synthetic android.os.Handler access$1(com.lefu.webview.camera.CameraWebviewActivity)
+com.lefu.webview.camera.CameraWebviewActivity$WebAppInterface:
+    125:132:public boolean upload(java.lang.String,java.lang.String)
+com.lefu.webview.camera.UploadThread
+com.lefu.webview.camera.UploadUtil
+com.lefu.webview.camera.UploadUtil$FormFile
+com.lefu.webview.camera.UploadUtil$ResponseBody
+com.lefu.webview.loadContact.Contact
+com.lefu.webview.loadContact.ContactPlugin:
+    30:58:public void show()
+    19:19:static synthetic com.lefu.webview.loadContact.ContactService access$0(com.lefu.webview.loadContact.ContactPlugin)
+    18:18:static synthetic android.webkit.WebView access$1(com.lefu.webview.loadContact.ContactPlugin)
+com.lefu.webview.loadContact.ContactPlugin$1
+com.lefu.webview.loadContact.ContactService:
+    9:13:public java.util.List getContacts()
+com.lefu.webview.loadContact.ShowContactActivity:
+    44:59:public void getContacts()
+    62:64:public void call(java.lang.String)
+fenshi.CustomViewClk
+fenshi.MyTextWatcher
+fenshi.ProgressView:
+    57:58:public final void a(float)
+fenshi.RingView:
+    57:58:public final void a(float)
