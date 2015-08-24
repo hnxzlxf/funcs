@@ -24,6 +24,8 @@ public class SQLiteDALBase {
 	{
 		if(mDataBase == null)
 		{
+			//getWritableDatabase 内部做了SQLiteDatabase的实例缓存，和同步锁，如果这把这个数据库做了单例处理，
+			//那么调用的时候，就丢失了同步锁的保护，所以这个实例不用做单例处理。
 			mDataBase = SQLiteHelper.getInstance(mContext).getWritableDatabase();
 		}
 		return mDataBase;
