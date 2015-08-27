@@ -1,7 +1,7 @@
 #include <android/log.h>
 
-#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "sk", __VA_ARGS__))
-#define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "sk", __VA_ARGS__))
+#define LOGI(...) ((void)__android_log_print(ANDROID_LOG_INFO, "yaogd", __VA_ARGS__))
+#define LOGW(...) ((void)__android_log_print(ANDROID_LOG_WARN, "yaogd", __VA_ARGS__))
 
 #if defined(__arm__)
   #if defined(__ARM_ARCH_7A__)

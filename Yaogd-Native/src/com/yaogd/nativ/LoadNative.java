@@ -7,5 +7,4 @@ public class LoadNative {
     }
     
     public static native String get() ;
-    public static native String getSecretKey() ;
 }

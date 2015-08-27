@@ -1,4 +1,4 @@
-package loopj.android.image;
+package com.yaogd.imgutil;
 
 import android.content.Context;
 import android.graphics.Bitmap;

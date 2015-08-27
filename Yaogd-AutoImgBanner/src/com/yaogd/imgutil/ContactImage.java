@@ -1,4 +1,4 @@
-package loopj.android.image;
+package com.yaogd.imgutil;
 
 import java.io.InputStream;
 

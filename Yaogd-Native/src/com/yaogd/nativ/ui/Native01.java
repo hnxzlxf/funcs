@@ -41,10 +41,9 @@ public class Native01 extends Activity {
 		
 		getSignature() ;
 		
-		//获取签名的C函数，需要依赖一个存活的继承于ContextWrapper的对象（四大组件+Application），普通的静态类不能调用。
-		Log.v("yaogd", "static call secret key:" + LoadNative.getSecretKey()) ;
 	}
 
+	//获取签名的C函数，需要依赖一个存活的继承于ContextWrapper的对象（四大组件+Application），普通的静态类不能调用。
 	private native String getSecretKey() ;
 	
 	static{
