@@ -1,12 +1,23 @@
 package com.yaogd.imgbanner.ui;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.SparseArray;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.FailReason;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.yaogd.imgbanner.R;
 import com.yaogd.imgbanner.view.BannerPager;
 import com.yaogd.imgbanner.view.CircleFlowIndicator;
@@ -21,6 +32,8 @@ public class TestActiviity extends Activity {
     private CircleFlowIndicator indicator;// 焦点图 dot
     
     private ImageView imgview;  
+    private boolean mUseFullscreen ;
+    private SparseArray<String> imgUrls ;
     
     public static final String[] IMAGES = new String[] {
             "http://c.hiphotos.baidu.com/image/w%3D310/sign=79f08e463b12b31bc76ccb28b6193674/09fa513d269759ee371072cab0fb43166d22df6a.jpg",
@@ -42,7 +55,7 @@ public class TestActiviity extends Activity {
         indicator = (CircleFlowIndicator) findViewById(R.id.banner_pager_indicator);
         indicator.setCount(4) ;
         
-        SparseArray<String> imgUrls = new SparseArray<String>();
+        imgUrls = new SparseArray<String>();
         imgUrls.append(0, IMAGES[0]) ;
         imgUrls.append(1, IMAGES[1]) ;
         imgUrls.append(2, IMAGES[2]) ;
@@ -79,50 +92,69 @@ public class TestActiviity extends Activity {
         
         
         //测试Universal image loader
+        imgview = (ImageView)findViewById(R.id.banner_pager_Img);
+        //测试全屏模式切换
+        imgview.setOnClickListener(new OnClickListener() {
+            
+            @Override
+            public void onClick(View v) {
+                Window w = getWindow();
+                if(mUseFullscreen) {
+                    w.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                    w.clearFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                } else {
+                    w.addFlags(WindowManager.LayoutParams.FLAG_FORCE_NOT_FULLSCREEN);
+                    w.clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                }
+                mUseFullscreen = !mUseFullscreen;
+                
+                //测试动态替换banner图片
+                imgUrls.remove(0) ;
+                imgUrls.append(0, IMAGES[4]) ;
+            }
+        }) ;
         
-//        imgview = (ImageView)findViewById(R.id.banner_pager_Img);
-//        
-//        //初始化，一般在Application中做一次
-//        ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(this));
-//        
-//        //使用ImageLoader加载
-//        DisplayImageOptions options = new DisplayImageOptions.Builder()
-//        .showImageForEmptyUri(R.drawable.miaomiao)
-//        .showImageOnFail(R.drawable.miaomiao)
-//        .resetViewBeforeLoading(true)
-//        .cacheOnDisk(true)
-//        .imageScaleType(ImageScaleType.EXACTLY)
-//        .bitmapConfig(Bitmap.Config.RGB_565)
-//        .considerExifParams(true)
-//        .displayer(new FadeInBitmapDisplayer(300))
-//        .build();
-//        
-//        ImageLoader.getInstance().displayImage(IMAGES[4], imgview, options, new ImageLoadingListener() {
-//            
-//            @Override
-//            public void onLoadingStarted(String imageUri, View view) {
-//                // TODO Auto-generated method stub
-//                
-//            }
-//            
-//            @Override
-//            public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-//                // TODO Auto-generated method stub
-//                
-//            }
-//            
-//            @Override
-//            public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-//                // TODO Auto-generated method stub
-//                
-//            }
-//            
-//            @Override
-//            public void onLoadingCancelled(String imageUri, View view) {
-//                // TODO Auto-generated method stub
-//                
-//            }
-//        }) ;
+        //初始化，一般在Application中做一次
+        ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(this));
+        
+        //使用ImageLoader加载
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
+        .showImageForEmptyUri(R.drawable.miaomiao)
+        .showImageOnFail(R.drawable.miaomiao)
+        .resetViewBeforeLoading(true)
+        .cacheOnDisk(true)
+        .imageScaleType(ImageScaleType.EXACTLY)
+        .bitmapConfig(Bitmap.Config.RGB_565)
+        .considerExifParams(true)
+        .displayer(new FadeInBitmapDisplayer(300))
+        .build();
+        
+        ImageLoader.getInstance().displayImage(IMAGES[4], imgview, options, new ImageLoadingListener() {
+            
+            @Override
+            public void onLoadingStarted(String imageUri, View view) {
+                // TODO Auto-generated method stub
+                
+            }
+            
+            @Override
+            public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
+                // TODO Auto-generated method stub
+                
+            }
+            
+            @Override
+            public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
+                // TODO Auto-generated method stub
+                
+            }
+            
+            @Override
+            public void onLoadingCancelled(String imageUri, View view) {
+                // TODO Auto-generated method stub
+                
+            }
+        }) ;
         
     }
     
